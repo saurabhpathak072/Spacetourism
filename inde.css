@@ -1,0 +1,109 @@
+/**
+ * /*--------------------------
+ *          Reset
+ *  
+ * /* --------------------------
+ *
+ * @format
+ */
+
+/* Box Sizing */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Reset Margin */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+picture,
+p {
+  margin: 0;
+}
+
+/* set up the body */
+
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* Make images to wok with */
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Make forms element easier to work with */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who have turned them off */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::after,
+  *::before {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --------------------------- */
+/*     Utility Classes         */
+/* --------------------------- */
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  padding: 0 2em;
+  max-width: 80rem;
+  margin-inline: auto;
+}
+
+/* working similar to display none but element remain in DOM*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.box {
+  background: lightgreen;
+  padding: 3rem;
+  margin: 1rem;
+}
+
+.cta {
+  background: pink;
+}
